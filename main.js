@@ -28,3 +28,5 @@ const subTotal = sumar(precioProducto, iva);
 restar(subTotal, precioDescuento);
 
 console.log(PrecioFinal);
+
+console.log(test);
