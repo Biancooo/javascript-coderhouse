@@ -1,12 +1,13 @@
 // Pre-entrega 1:
-// 1
+
+// Let y Const
 
 let anoNacimiento = prompt("ingresar fecha de nacimiento");
 
 const anoActual = 2024;
 let edad = anoActual - anoNacimiento;
 
-// 2
+// If y Else
 
 if (edad >= 18) {
     console.log("Eres mayor de 18 años");
@@ -15,7 +16,7 @@ else if (edad <= 18) {
     console.log("Eres menor de 18 años");
 }
 
-// 3
+// Calcular IVA
 
 let precioProducto = 0;
 let precioDescuento = 0;
@@ -31,15 +32,14 @@ restar(subTotal, precioDescuento);
 console.log(PrecioFinal);
 
 // Pre-entrega 2:
-// 1
+
+// Variables y Alert
 
 var nombrepersona;
 nombrepersona = prompt("Escribir su nombre completo: ");
 alert("Su nombre es: " + nombrepersona);
 
-// 2
-
-// Suma
+// Calcular Sumas
 
 var num1 = Number(prompt("Escribe un numero"));
 var num2 = Number(prompt("Escribe otro numero"));
@@ -50,7 +50,7 @@ function sumar(n1, n2){
     return n1 + n2;
 }
 
-// Resta
+// Calcular Restas
 
 var num1 = Number(prompt("Escribe un numero"));
 var num2 = Number(prompt("Escribe otro numero"));
@@ -61,7 +61,7 @@ function restar(n1, n2){
     return n1 - n2;
 }
 
-// Multiplicacion
+// Calcular Multiplicaciones
 
 var num1 = Number(prompt("Escribe un numero"));
 var num2 = Number(prompt("Escribe otro numero"));
@@ -72,7 +72,7 @@ function multiplicar(n1, n2){
     return n1 * n2;
 }
 
-// Concatenacion
+// Calcular Concatenaciones en var
 
 var uno = Hola;
 
@@ -80,7 +80,7 @@ var dos = Mundo;
 
 var union = uno + dos;
 
-// Division
+// Calcular Divisiones
 
 var num1 = Number(prompt("Escribe un numero"));
 var num2 = Number(prompt("Escribe otro numero"));
@@ -91,7 +91,7 @@ function dividir(n1, n2){
     return n1 / n2;
 }
 
-// Porcentaje
+// Calcular Porcentajes
 
 var num1 = Number(prompt("Escribe un numero"));
 var num2 = Number(prompt("Escribe otro numero"));
@@ -101,3 +101,57 @@ alert(`${porcentacion}`);
 function porcentar(n1, n2){
     return n1 % n2;
 }
+
+// Pre-entrega 3:
+
+// LocalStorage y JSON
+
+lst = [{
+    name: "Hector",
+    age: 34
+},{
+    name: "Francisco",
+    age: 40
+}];
+
+localStorage.setItem("lista",JSON.stringify(list));
+
+lst =JSON.parse(localStorage.getItem("list"));
+
+lst.forEach(element => {
+    let elements = document.getElementById("elements");
+    let div = document.createElement("div");
+    div.innerHTML = element.name + " "+ element.age;
+    elements.appendChild(div);
+});
+
+// DOM (Document Object Model)
+
+// Seleccionar elementos
+
+// Por ID:
+
+let elementoPorId = document.getElementById('parrafo1');
+elementoPorId.innerHTML = 'HTML';
+
+// Por Nombre de la Clase:
+
+let elementosPorClase = document.getElementsByClassName('parrafos');
+console.log(elementosPorClase.length);  3
+elementosPorClase[1].innerHTML = 'CSS';
+
+// Por Etiqueta:
+
+let elementosPorEtiqueta = document.getElementsByTagName('p');
+console.log(elementosPorEtiqueta.length);  3
+elementosPorEtiqueta[2].innerHTML = 'JavaScript';
+
+// Modificando Estilos con JS: (CSS)
+
+elementoPorId.style.background = 'black';
+elementoPorId.style.color = 'white';
+elementoPorId.style.borderRadius = '8px';
+elementoPorId.style.width = '250px';
+elementoPorId.style.textAlign = 'center';
+
+// Event Listeners: (EL ULTIMO QUE ME FALTA)
