@@ -154,4 +154,14 @@ elementoPorId.style.borderRadius = '8px';
 elementoPorId.style.width = '250px';
 elementoPorId.style.textAlign = 'center';
 
-// Event Listeners: (EL ULTIMO QUE ME FALTA)
+// Event Listeners:
+
+const clickTitulo = (ev) => {
+    console.log(ev);
+};
+
+const titulo2 = document.getElementById("tituloForm");
+
+titulo2.addEventListener('click', clickTitulo);
+
+// Event DOMContentLoaded:
