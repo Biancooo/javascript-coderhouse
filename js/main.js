@@ -165,3 +165,9 @@ const titulo2 = document.getElementById("tituloForm");
 titulo2.addEventListener('click', clickTitulo);
 
 // Event DOMContentLoaded:
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("El documento ha cargado y los elementos tambien");
+});
+
+// Event Submit:
